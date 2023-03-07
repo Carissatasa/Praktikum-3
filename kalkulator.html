@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+</head>
+<script language="javascript">
+	//nama function tidak boleh sama dengan penamaan aritmatika di js, cth = di js perhitungan - bernama "MIN" maka function tidak boleh bernama "MIN" jg
+	//nama function juga tidak boleh sama dengan properties name pada elemen input
+	function plus(){
+		var a,b,c;
+		a=document.hitung.a.value;
+		b=document.hitung.b.value;
+		c=parseInt(a)+parseInt(b);
+		document.hitung.c.value=c;
+	}
+	function kurang(){
+		var a,b,c;
+		a=document.hitung.a.value;
+		b=document.hitung.b.value;
+		c=parseInt(a)-parseInt(b);
+		document.hitung.c.value=c;
+	}
+	function kali(){
+		var a,b,c;
+		a=document.hitung.a.value;
+		b=document.hitung.b.value;
+		c=parseInt(a)*parseInt(b);
+		document.hitung.c.value=c;
+	}
+	function bagi(){
+		var a,b,c;
+		a=document.hitung.a.value;
+		b=document.hitung.b.value;
+		c=parseInt(a)/parseInt(b);
+		document.hitung.c.value=c;
+	}
+	//<!-
+	document.write("Dimodifikasi terakhir pada " + document.lastModified);
+	//->
+</script>
+<body>
+<form name="hitung">
+	<h1>KALKULATOR SEDERHANA</h1>
+	Masukkan angka untuk dihitung<br><input type="text" name="a" size="10">
+	<input type="text" name="b" size="10">
+
+	<p><input type="button" value="+" onclick="plus()">
+	<input type="button" value="-" onclick="kurang()">
+	<input type="button" value="*" onclick="kali()">
+	<input type="button" value="/" onclick="bagi()"></p>
+
+	<br>HASIL<br><input type="text" name="c" readonly=true>
+</form>
+</body>
+</html>
